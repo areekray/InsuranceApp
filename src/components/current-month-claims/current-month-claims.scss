@@ -1,0 +1,39 @@
+current-month-claims {
+    .legendLabels {
+        padding: 5px 2px;
+    }
+    .legend {
+        display: inline-block;
+        margin-right: 10px; 
+        width: 30px;
+        height: 10px;
+    
+    }
+    ion-grid {
+        ion-row {
+            ion-col {                
+                &:first-child {
+                    border-right: 1px solid map-get($colors, border);
+                    .chart-container {
+                        position: relative;
+                        margin-left: -28px;
+                    }
+                    .totalData {
+                        position: absolute;
+                        top: 50%;
+                        bottom: auto;
+                        left: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                        font-size: 18px;
+                        color: map-get($colors, currency);
+                        font-weight: 600;
+                    }
+                }
+                &:last-child {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+   
+}

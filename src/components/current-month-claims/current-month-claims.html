@@ -1,0 +1,24 @@
+<!-- Generated template for the CurrentMonthClaimsComponent component -->
+<ion-grid>
+  <ion-row>
+    <ion-col col-6>
+        <div class="chart-container" style="display: block">
+            <canvas baseChart
+                        [data]="doughnutChartData"
+                        [labels]="doughnutChartLabels"
+                        [chartType]="doughnutChartType"
+                        [options]= "doughnutChartOptions"
+                        [colors]="chartColors"></canvas>
+            <div class="totalData">{{ calculateTotal() | currency : 'INR' : true}}</div>
+          </div>
+          
+    </ion-col>
+    <ion-col>
+      <div class="legendLabels" *ngFor="let label of doughnutChartLabels; let i = index">
+        <div class="legend" [style.background]="chartColors[0].backgroundColor[i]"></div><span>{{label}}</span>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+

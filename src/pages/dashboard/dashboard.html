@@ -1,0 +1,127 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        Dashboard
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content #content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-md-6 col-lg-4>
+        <ion-card>
+          <ion-card-header>
+            <ion-title>Claims for {{ currentMonth }}</ion-title>
+          </ion-card-header>
+          <ion-card-content>
+              <current-month-claims></current-month-claims>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 col-md-6 col-lg-4>
+          <ion-card>
+              <ion-card-header>
+                <ion-title>Claims by date</ion-title>
+              </ion-card-header>
+              <ion-card-content>
+                  <date-wise-claims></date-wise-claims>
+              </ion-card-content>
+            </ion-card>
+      </ion-col>
+      <ion-col col-12 col-md-12 col-lg-4>
+          <ion-card>
+              <ion-card-header>
+                <ion-title>Close Rate</ion-title>
+              </ion-card-header>
+              <ion-card-content>
+                  <close-rate></close-rate>
+              </ion-card-content>
+            </ion-card>
+      </ion-col>
+      <ion-col col-12 col-md-12 col-lg-8>
+        <ion-card>
+          <ion-card-header>
+              <ion-title>Claimant Information</ion-title>
+          </ion-card-header>
+          <ion-card-content>
+            <claimant-info></claimant-info>
+          </ion-card-content>
+          <button ion-button clear block>See More</button>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 col-md-12 col-lg-4>
+        <ion-card>
+          <ion-card-header>
+              <ion-title>Claim Status</ion-title>
+          </ion-card-header>
+          <ion-card-content>
+            <claims-status></claims-status>
+          </ion-card-content>
+          <button ion-button clear block>See More</button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
+<ion-menu [content]="content" type="overlay"> 
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title class="app-title"><span>I</span>nsurHandy</ion-title>
+    </ion-toolbar>        
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item-divider>
+          Dashboard 
+      </ion-item-divider>
+      <button ion-item>
+        Current Month Claims
+      </button>
+      <button class="no-border" ion-item>
+        Date Wise Claims
+      </button>
+      <button ion-item>
+        Close Rates
+      </button>
+      <button ion-item>
+        Claimants Information
+      </button>
+      <button class="no-border" ion-item>
+        Claim Status
+      </button>
+      <ion-item-divider>
+          Support 
+      </ion-item-divider>
+      <button ion-item>
+        Feedback
+      </button>
+      <button ion-item>
+        Sign Out
+      </button>
+    </ion-list>
+  </ion-content>
+   
+</ion-menu>

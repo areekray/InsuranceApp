@@ -1,0 +1,19 @@
+page-dashboard {
+    ion-card {
+        ion-card-content {
+            height: 195px;
+        }
+        button {
+            border-top: 1px solid map-get($colors, border);
+        }
+    }
+    .app-title {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        .toolbar-title-md {
+            font-size: 40px;
+            span {
+                font-size: 65px;
+            }
+        }
+    }
+}
